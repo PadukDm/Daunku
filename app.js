@@ -24,8 +24,17 @@ app.post(`/add-plants`, async(req,res)=>{
         const {title, price} = req.body;
         const plants = new Plants({title, price});
         await plants.save();
-        console.log(`Plant created`)ж
+        console.log(`Plant created`)
         res.status(201).json(plants);
+    }catch(err){
+        res.status(500).json({message:err})
+    }
+})
+
+app.get('/plants', async(req, res)=>{
+    try{
+        const plants = await Plants.find()
+        res.json(plants)
     }catch(err){
         res.status(500).json({message:err})
     }

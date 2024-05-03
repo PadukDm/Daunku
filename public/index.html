@@ -4,8 +4,205 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-</head>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/axios/1.6.8/axios.js' integrity='sha512-pmaEGtUAy7E5gRmwjLqQAD/QWw0dL4Z59b6b+2HQkqQwQ+HcPLLb9/KbUNo5zr10WuXmbivK9nYVZOyDkMgZMg==' crossorigin='anonymous'></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Carme&family=Madimi+One&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Tauri&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 <body>
+    <div class="wrap">
+        <div class="mainPage">
+            <div class="homePage">
+                <div class="header">
+                    <div class="logo" id="logo">
+                        <div class="logoImage"></div>
+                        <div class="logoName">Daunku</div>
+                    </div>
     
+                    <div class="headerCategories">
+                        <p class="categorie" id="categorie1">Home</p>
+                        <p class="categorie" id="categorie">Shop</p>
+                        <p class="categorie" id="categorie">About Us</p>
+                        <p class="categorie" id="categorie">Contact</p>
+                    </div>
+                    <div class="cartContainer">
+                        <div class="cart"><i class="fa-solid fa-bag-shopping"></i></div>
+                        <div class="cartCounter"></div>
+                    </div>
+ 
+                </div>
+    
+                <div class="mainPage-banner">
+                    <div class="mainPage-banner-text">
+                        <div class="largeText">Bring Serenity to Your Place<br>With Interior Plants</div>
+                        <div class="smallerText">find your dream plant for you home decoration<br>with us, and we will make it happen.</div>
+                    </div>
+
+                    <div class="searchContainer">
+                        <p>Search plant</p>
+    
+                        <button class="searchBtn"><i class="fa-solid fa-magnifying-glass"></i></button>
+                    </div>
+                </div>
+    
+            </div>
+            
+            <div class="secondPage">
+                <div class="infoContainer">
+                    <div class="infoCard">
+                        <div class="infoCardImg" id="infoCardImg1"></div>
+                        <div class="infoCardText">
+                            <div class="infoCardText1">Free Shipping</div>
+                            <div class="infoCardText2">No charge for each delivery</div>
+                        </div>
+                    </div>
+                    <div class="infoCard">
+                        <div class="infoCardImg" id="infoCardImg2"></div>
+                        <div class="infoCardText">
+                            <div class="infoCardText1">Quick Payment</div>
+                            <div class="infoCardText2">100% secure payment</div>
+                        </div>
+                    </div>
+                    <div class="infoCard">
+                        <div class="infoCardImg" id="infoCardImg3"></div>
+                        <div class="infoCardText">
+                            <div class="infoCardText1">24/7 Support</div>
+                            <div class="infoCardText2">Quick support</div>
+                        </div>
+                    </div>    
+                </div>
+    
+                <div class="bestSellerProductContainer">
+                    <div class="bestSellerContainer">
+                        <div class="bestSeller1">Best Seller <br> Product</div>
+                        <div class="bestSeller2">See all colection <i class="fa-solid fa-arrow-right"></i></div>    
+                    </div>
+               
+                    <div class="cardContainer"></div>
+                </div>
+            </div>
+
+            
+            <div class="thirdPage">
+                <div class="interiorPlant">Interior Plant Reference</div>
+                <div class="interiorPlantSmall">make your home so comfortable with refreshing plants</div>
+                
+                <div class="roomsContainer">
+                    <div class="stContainer">
+                        <div class="stRoom"></div>
+                        <div class="ndRoom"></div>
+                    </div>
+                    <div class="rdRoom"></div>
+                </div>
+    
+                <div class="howToCarePage">
+
+                    <div class="howToCareTextContainer">
+                        <div class="howToCareText">How to care<br>for plants</div>
+                        <div class="howToCareNdText">Take care of plants with all your heart</div>
+                    </div>
+
+                    <div class="howToCareContainer">
+                        <div class="conditionsContainer">
+                            <div class="condition">
+                                <div class="conditionImage" id="conditionImage1"></div>
+                                <div class="conditionTxtContainer">
+                                    <div class="conditionMainText">Adjust Lighting</div>
+                                    <div class="conditionDescText">When caring for indoor plants, make sure the<br>room temperature is neither too cold or too hot.</div>
+                                </div>
+                            </div>
+                            <div class="condition">
+                                <div class="conditionImage" id="conditionImage2"></div>
+                                <div class="conditionTxtContainer">
+                                    <div class="conditionMainText">Don't water too often</div>
+                                    <div class="conditionDescText">Watering ornamental plants indoors does<br>not have to be done every day.</div>
+                                </div>
+                            </div>
+                            <div class="condition">
+                                <div class="conditionImage" id="conditionImage3"></div>
+                                <div class="conditionTxtContainer">
+                                    <div class="conditionMainText">Don't water too often</div>
+                                    <div class="conditionDescText">Watering ornamental plants indoors does<br>not have to be done every day.</div>
+                                </div>
+                            </div>
+                            <div class="condition">
+                                <div class="conditionImage" id="conditionImage4"></div>
+                                <div class="conditionTxtContainer" id="conditionTxtContainer">
+                                    <div class="conditionMainText">Fertilize regularly</div>
+                                    <div class="conditionDescText">The nutrients most indoor houseplants need <br> are nitrogen for balance and potassium for stem <br> strength.</div>
+                                </div>
+                            </div>
+        
+                        </div>
+        
+                        <div class="howToCarePageImage"></div>
+                    </div>
+    
+                </div>
+            </div>
+
+
+            <div class="footerPage">
+                <div class="footerContainer">
+
+                    <div class="newslatterAndColumnContainer">
+                        <div class="newslatterContainer">
+                            <div class="newslatter">Newslatter</div>
+                            <div class="inputContainer">
+                                <input type="text" class="newslatterInput" id="newslatterInput" placeholder="Enter your email">
+                                <button class="subscribeBtn">Subscribe</button>
+                            </div>
+    
+                        </div>
+    
+        
+                        <div class="columnContainer">
+                            <div class="column">
+                                <div class="columnTitle">Support</div>
+                                <div class="columnTheme">About Us</div>
+                                <div class="columnTheme">Careers</div>
+                                <div class="columnTheme">Blog</div>
+                            </div>
+                            <div class="column">
+                                <div class="columnTitle">Useful Link</div>
+                                <div class="columnTheme">Payment & Tax</div>
+                                <div class="columnTheme">Careers</div>
+                                <div class="columnTheme">Team of service</div>
+                            </div>
+                            <div class="column">
+                                <div class="columnTitle">Our Menu</div>
+                                <div class="columnTheme">Best Product</div>
+                                <div class="columnTheme">Category</div>
+                            </div>
+        
+                            <div class="column">
+                                <div class="columnTitle">Address</div>
+                                <div class="columnTheme">JL. Setiabudhi No. 193 Sukasari, Bandung <br> West Java, Indonesia</div>
+                                <div class="columnTheme">hallo@daunku.com</div>
+                            </div>
+                        </div>
+                    </div>
+
+    
+
+                    <div class="finalTextcontainer">
+                        <div class="vector"></div>
+    
+                        <div class="rightsText">© 2022 Daunku - All rights reserved.</div>
+                    </div>
+                    
+                </div>
+            </div>
+
+ 
+        </div>
+    </div>
+
+    <script src="main.js"></script>
 </body>
 </html>
+
+
