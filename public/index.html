@@ -8,7 +8,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <script src='https://cdnjs.cloudflare.com/ajax/libs/axios/1.6.8/axios.js' integrity='sha512-pmaEGtUAy7E5gRmwjLqQAD/QWw0dL4Z59b6b+2HQkqQwQ+HcPLLb9/KbUNo5zr10WuXmbivK9nYVZOyDkMgZMg==' crossorigin='anonymous'></script>
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Carme&family=Madimi+One&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Tauri&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
@@ -28,8 +28,11 @@
                         <p class="categorie" id="categorie">About Us</p>
                         <p class="categorie" id="categorie">Contact</p>
                     </div>
+                    
+                    .
+                    <div class="themeChooseContainer"></div>
                     <div class="cartContainer">
-                        <div class="cart"><i class="fa-solid fa-bag-shopping"></i></div>
+                        <div class="cartBtn" id="cartBtn"><i class="fa-solid fa-bag-shopping"></i></div>
                         <div class="cartCounter"></div>
                     </div>
  
@@ -201,6 +204,39 @@
         </div>
     </div>
 
+    <div class="overlay"></div>
+
+
+    <div class="cartPopup" id="cartPopup">
+        <div class="cartPopupHeader">
+            <div class="closeBtn"><i class="fa-solid fa-chevron-right"></i></div>
+            <div class="cartPopupHeaderText">My Orders <span>(0)</span> </div>
+        </div>
+
+        <div class="cartOrderContainer">
+            <!-- <div class='cartItem'>
+                <div class="cartItemImage"></div>
+                <div class="cartItemInfoContainer">
+                    <div class="cartItemName"></div>
+                    <div class="cartItemPrice"></div>
+                </div>
+                <div class="cartItemQuantity">
+                    <div class="addItem">+</div>
+                    <div class="totalQuantityItem">1</div>
+                    <div class="removeItem">-</div>
+                </div>
+            </div> -->
+        </div>
+        <div class="cardPopupTotalContainer">
+            <div class="total" id="total">$ 0</div>
+
+            <button class="checkOutBtn" id="checkOutBtn">Check Out</button>
+        </div>
+    </div>
+
+
+
+    
     <script src="main.js"></script>
 </body>
 </html>

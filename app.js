@@ -3,6 +3,7 @@ const app = express()
 const PORT = 3000
 const mongoose = require(`mongoose`) 
 const path = require(`path`)
+const multer  = require('multer')
 
 app.use(express.static(`public`))
 app.use(express.json())
@@ -18,6 +19,7 @@ mongoose.connect(`mongodb+srv://root:oGff1dNEIS9tbJBP@cluster0.tp3rcn1.mongodb.n
 
 
 const Plants = mongoose.model('Plants', {title: String, price: Number})
+
 
 app.post(`/add-plants`, async(req,res)=>{
     try{
@@ -43,3 +45,5 @@ app.get('/plants', async(req, res)=>{
 app.listen(PORT, ()=>{
     console.log(`Server work on port: ${PORT}`)
 })
+
+
